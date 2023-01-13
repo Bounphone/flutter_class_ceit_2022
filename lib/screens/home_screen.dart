@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/screens/about_us.dart';
 import 'package:flutter_starter/screens/detail.dart';
+import 'package:flutter_starter/screens/show_name.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -74,6 +75,16 @@ class HomeScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => AboutUsScreen()));
                 },
                 child: const Text("About us"),
+              ),
+              const SizedBox(width: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ShowNameScreen()));
+                },
+                child: const Text("Show name"),
               )
             ],
           )
